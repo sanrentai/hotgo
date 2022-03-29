@@ -7,7 +7,7 @@
 
 * 后端：用 goframe2.0 快速搭建基础API，goframe2.0 是一个go语言编写的Web框架。
 * 前端：用基于 JeeSite Mobile Uni-App+aidex-sharp 构建基础页面。
-* 数据库：采用MySql(5.7)版本，使用 gorm 实现对数据库的基本操作。
+* 数据库：采用MySql(8.0)版本，使用 gorm 实现对数据库的基本操作。
 * 缓存：使用Redis实现记录当前活跃用户的jwt令牌并实现多点登录限制。
 * API文档：使用Swagger构建自动化文档。
 * 消息队列：同时兼容 kafka、redis、rocketmq，一键配置切换到自己想用的MQ。
@@ -26,10 +26,10 @@
 ![image](https://user-images.githubusercontent.com/26652343/155689738-ac97f9c0-47ae-499b-b3fe-0cb4ce97f3bc.png)
 
 ## 环境要求
-- node版本 >= v14.0.0
+- node版本 >= v14.0.0 
 - golang版本 >= v1.16
 - IDE推荐：Goland
-- mysql版本 >=5.7
+- mysql版本 >=8.0
 - redis版本 >=5.0
 
 ## 快速开始
@@ -42,7 +42,7 @@ git clone https://github.com/bufanyun/hotgo.git
 
 服务端：
  - 创建mysql数据库，将数据库文件导入你的mysql，目录地址：/hotgo-server/storage/hotgo.sql
- - 将/hotgo-server/config/config.example.yaml 改为：config.example.yaml，并根据你实际环境情况进行配置
+ - 将/hotgo-server/config/config.example.yaml 改为：config.yaml，并根据你实际环境情况进行配置
 
 web+uinapp端：
  - 配置服务端地址，包含在一下文件中：
