@@ -19,6 +19,7 @@ router:
     exceptLogin: [
       "/login/captcha",         # 登录验证码
       "/login/sign",            # 登录
+      "/login/logout",          # 退出
     ]
     # 不需要验证权限的路由地址
     exceptAuth: [
@@ -84,8 +85,8 @@ queue:
   groupName: "hotgo"                                # mq群组名称
   redis:
     address:        "127.0.0.1:6379"                # redis服务地址，默认为127.0.0.1:6379
-    db:             5                               # 指定redis库
-    pass:           "meng133814250"                 # redis密码
+    db:             0                               # 指定redis库
+    pass:           "hg123456"                      # redis密码
     timeout:        0                               # 队列超时时间(s) ，0为永不超时，当队列一直没有被消费到达超时时间则队列会被销毁
   rocketmq:
     address: "127.0.0.1:9876"                       # brocker地址+端口
